@@ -1,1 +1,4 @@
 node_modules/
+
+# Temporarily ignore frontend folder
+../pizza-billing-frontend/
