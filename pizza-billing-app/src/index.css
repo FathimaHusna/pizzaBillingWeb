@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+    .print\:hidden {
+        display: none !important;
+    }
+    .print\:max-w-full {
+        max-width: 100% !important;
+    }
+    .print\:shadow-none {
+        box-shadow: none !important;
+    }
+    .print\:border-none {
+        border: none !important;
+    }
+}
+
+/* Base Range Input Style */
+input[type="range"] {
+    @apply w-full appearance-none bg-transparent outline-none;
+}
+
+/* Track - Webkit Browsers (Chrome, Safari) */
+input[type="range"]::-webkit-slider-runnable-track {
+    @apply bg-[#A8422D] h-1 rounded-full;
+}
+
+/* Thumb - Webkit Browsers */
+input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 bg-[#6f4f1f] rounded-full cursor-pointer shadow-md -mt-1;
+}
+
+/* Thumb Hover */
+input[type="range"]::-webkit-slider-thumb:hover {
+    @apply bg-[#8b5d33];
+}
+
+/* Track - Firefox */
+input[type="range"]::-moz-range-track {
+    @apply bg-[#d2b48c] h-1 rounded-full;
+}
+
+/* Thumb - Firefox */
+input[type="range"]::-moz-range-thumb {
+    @apply w-4 h-4 bg-[#6f4f1f] rounded-full cursor-pointer shadow-md;
+}
+
+/* Thumb Hover - Firefox */
+input[type="range"]::-moz-range-thumb:hover {
+    @apply bg-[#8b5d33];
+}
