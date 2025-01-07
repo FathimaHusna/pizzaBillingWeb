@@ -49,7 +49,7 @@ func main() {
 
 	// ✅ CORS Middleware Configuration
 	app.Use(cors.New(cors.Config{
-		AllowOrigins:     "http://localhost:3000", // Allow frontend origin
+		AllowOrigins:     "http://localhost:3001", // Allow frontend origin
 		AllowMethods:     "GET,POST,PUT,DELETE",
 		AllowHeaders:     "Content-Type",
 		AllowCredentials: true,

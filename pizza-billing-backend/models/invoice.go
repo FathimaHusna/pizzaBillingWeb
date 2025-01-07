@@ -2,15 +2,7 @@ package models
 
 import "time"
 
-// type Invoice struct {
-// 	InvoiceID     uint      `gorm:"primarykey" json:"invoice_id"`
-// 	CustomerName  string    `json:"customer_name"`
-// 	Date          time.Time `json:"date"`
-// 	TotalAmount   float64   `json:"total_amount"`
-// 	CreatedAt     time.Time `json:"created_at"`
-// 	TaxAmount     float64   `json:"tax_amount"`
-// 	NetAmount     float64   `json:"net_amount"`
-// }
+
 
 type Invoice struct {
     InvoiceID    uint          `json:"id" gorm:"primaryKey"`
