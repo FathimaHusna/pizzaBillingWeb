@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Pizza Shop Billing Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisites
+Before setting up the project, ensure you have the following installed:
+1. **Node.js**: [Download and Install Node.js](https://nodejs.org/)
+2. **Go (Golang)**: [Download and Install Go](https://golang.org/dl/)
+3. **PostgreSQL**: [Download and Install PostgreSQL](https://www.postgresql.org/download/)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Setting Up the Project
 
-### `npm start`
+### Step 1: Clone the Repository
+First, clone this repository to your local machine using the following command:
+```bash
+git clone https://github.com/FathimaHusna/pizzaBillingWeb
+cd pizzaBillingWeb
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Step 2 Set Up the Backend (Go)
+####1. Install Dependencies: Navigate to the backend folder and install necessary Go dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+go mod tidy
+cd pizza-billing-backend
 
-### `npm test`
+####2.Configure Database:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure your PostgreSQL server is running.
+Create a database and configure it in the db.go file in the backend
 
-### `npm run build`
+dsn := "host=localhost user=your_user password=your_db_password dbname=your_db_name port=your_port_number sslmode=disable"
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+####3. Run Database Migrations:
+The database schema will be automatically managed by the ORM.
+Note: No manual schema setup is required.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+####4. Run the Backend Server: Run the Go backend server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+go run main.go
 
-### `npm run eject`
+The backend server will run on
+http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Step 3: Set Up the Frontend (React)
+Install Dependencies: Navigate to the frontend folder and install required node modules:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd pizza-billing-app
+npm install
+Configure API Base URL: In the src/services/Api.js file, configure the base URL for the API:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+const BASE_URL = "http://localhost:3000/api";  // Go backend URL
+Run the Frontend Development Server: Start the React development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm start
+The frontend will run on http://localhost:3001.
 
-## Learn More
+####Database Note
+The database schema is automatically managed by the ORM (Object-Relational Mapping) in the backend application. There is no need for manual schema creation using SQL scripts.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running the Application
+Once you have both the backend and frontend servers running, you can access the application in your browser at:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Frontend: http://localhost:3001
+Backend: http://localhost:3000

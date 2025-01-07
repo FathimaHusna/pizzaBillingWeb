@@ -136,7 +136,49 @@ const ItemsPage = () => {
                         />
                         {isEditing === item.id ? (
                             <>
-                                <input value={editedItem.name} onChange={(e) => setEditedItem({ ...editedItem, name: e.target.value })} className="w-full p-2 border rounded mb-2" />
+                                <div className="space-y-2">
+    {/* Name */}
+    <input 
+        value={editedItem.name} 
+        onChange={(e) => setEditedItem({ ...editedItem, name: e.target.value })} 
+        placeholder="Name"
+        className="w-full p-2 border rounded mb-2"
+    />
+    
+    {/* Description */}
+    <input 
+        value={editedItem.description} 
+        onChange={(e) => setEditedItem({ ...editedItem, description: e.target.value })} 
+        placeholder="Description"
+        className="w-full p-2 border rounded mb-2"
+    />
+    
+    {/* Price */}
+    <input 
+        type="number"
+        value={editedItem.price} 
+        onChange={(e) => setEditedItem({ ...editedItem, price: parseFloat(e.target.value) || 0 })} 
+        placeholder="Price"
+        className="w-full p-2 border rounded mb-2"
+    />
+    
+    {/* Category */}
+    <input 
+        value={editedItem.category} 
+        onChange={(e) => setEditedItem({ ...editedItem, category: e.target.value })} 
+        placeholder="Category"
+        className="w-full p-2 border rounded mb-2"
+    />
+    
+    {/* Image URL */}
+    <input 
+        value={editedItem.image_url} 
+        onChange={(e) => setEditedItem({ ...editedItem, image_url: e.target.value })} 
+        placeholder="Image URL"
+        className="w-full p-2 border rounded mb-2"
+    />
+</div>
+
                                 <button onClick={() => handleUpdate(item.id)} className="bg-green-600 text-white px-4 py-2 rounded-lg">Save</button>
                                 <button onClick={() => setIsEditing(null)} className="bg-gray-500 text-white px-4 py-2 rounded-lg ml-2">Cancel</button>
                             </>

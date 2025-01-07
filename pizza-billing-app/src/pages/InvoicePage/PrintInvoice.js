@@ -54,10 +54,10 @@ const PrintInvoice = ({ invoice }) => {
                         {items.length > 0 ? (
                             items.map((item, index) => (
                                 <tr key={index} className="border-t">
-                                    <td className="px-4 py-2">{item.item_name}</td>
+                                    <td className="px-4 py-2">{item.name}</td>
                                     <td className="px-4 py-2">{item.quantity}</td>
                                     <td className="px-4 py-2">Rs.{item.price?.toFixed(2) || "0.00"}</td>
-                                    <td className="px-4 py-2">Rs.{item.amount?.toFixed(2) || "0.00"}</td>
+                                    <td className="px-4 py-2">Rs.{invoice.net_amount?.toFixed(2) || "0.00"}</td>
                                 </tr>
                             ))
                         ) : (

@@ -17,12 +17,6 @@ func SetupRoutes(app *fiber.App) {
 	invoices.Put("/:id", controllers.UpdateInvoice)         // PUT update invoice by ID
 	invoices.Delete("/:id", controllers.DeleteInvoice)      // DELETE invoice by ID
 
-	// Invoice Items Nested under Invoices
-	invoiceItems := invoices.Group("/:invoice_id/items")
-	invoiceItems.Get("/", controllers.GetInvoiceItems)      // GET all items for a specific invoice
-	invoiceItems.Post("/", controllers.CreateInvoiceItem)   // POST create item for a specific invoice
-	invoiceItems.Put("/:item_id", controllers.UpdateInvoiceItem) // PUT update specific invoice item
-	invoiceItems.Delete("/:item_id", controllers.DeleteInvoiceItem) // DELETE specific invoice item
 
 	// Item Routes (Independent Items)
 	items := api.Group("/items")

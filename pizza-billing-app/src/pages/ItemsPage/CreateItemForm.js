@@ -27,10 +27,21 @@ const CreateItemForm = () => {
             console.log("Item created successfully:", result);
             setAlertMessage("Item created successfully!");
             setAlertType("success");
+            // Clear the success message after 3 seconds
+            setTimeout(() => {
+            setAlertMessage("");
+            setAlertType("");
+        }, 3000); // 3 seconds
         } catch (error) {
             console.error("Error creating item:", error);
             setAlertMessage("Error creating item. Please try again.");
             setAlertType("error");
+
+            // Clear the success message after 3 seconds
+            setTimeout(() => {
+            setAlertMessage("");
+            setAlertType("");
+        }, 3000); // 3 seconds
         }
     };
 
