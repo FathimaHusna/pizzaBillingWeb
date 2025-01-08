@@ -9,7 +9,6 @@ git clone https://github.com/FathimaHusna/pizzaBillingWeb
 cd pizzaBillingWeb
 ```
 
----
 
 ## ⚙️ **Step 2: Set Up the Backend (Go)**
 
@@ -98,22 +97,22 @@ Once both servers are running, access the application in your browser:
 ## 🖥️ **Screenshots**
 
 ### 🏠 Homepage  
-![Homepage Screenshot](./screenshots/home.png)
+![Homepage Screenshot](./public/screenshots/home.png)
 
 ### 🍕 Items  
-![Itempage_1 Screenshot](./screenshots/it1.png)  
-![Itempage_2 Screenshot](./screenshots/it2.png)  
-![Itempage_3 Screenshot](./screenshots/it3.png)  
-![Itempage_4 Screenshot](./screenshots/it4.png)  
-![Itempage_5 Screenshot](./screenshots/it5.png)  
-![Itempage_6 Screenshot](./screenshots/it6.png)  
+![Itempage_1 Screenshot](./public/screenshots/Items/it1.png)  
+![Itempage_2 Screenshot](./public/screenshots/Items/it2.png)  
+![Itempage_3 Screenshot](./public/screenshots/Items/it3.png)  
+![Itempage_4 Screenshot](./public/screenshots/Items/it4.png)  
+![Itempage_5 Screenshot](./public/screenshots/Items/it5.png)  
+![Itempage_6 Screenshot](./public/screenshots/Items/it6.png)  
 
 ### 🧾 Invoices  
-![Invoicepage_1 Screenshot](./screenshots/inv1.png)  
-![Invoicepage_2 Screenshot](./screenshots/inv2.png)  
-![Invoicepage_3 Screenshot](./screenshots/inv3.png)  
-![Invoicepage_4 Screenshot](./screenshots/inv4.png)  
-![Invoicepage_5 Screenshot](./screenshots/inv5.png)  
+![Invoicepage_1 Screenshot](./public/screenshots/Invoices/inv1.png)
+![Invoicepage_2 Screenshot](./public/screenshots/Invoices/inv2.png)  
+![Invoicepage_3 Screenshot](./public/screenshots/Invoices/inv3.png)  
+![Invoicepage_4 Screenshot](./public/screenshots/Invoices/inv4.png)  
+![Invoicepage_5 Screenshot](./public/screenshots/Invoices/inv5.png)  
 
 ---
 
