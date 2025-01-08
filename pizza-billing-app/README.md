@@ -10,7 +10,7 @@ Before setting up the project, ensure you have the following installed:
 
 ## Setting Up the Project
 
-### Step 1: Clone the Repository
+### Step 1: Clone the Repository (or unzip the folder)
 First, clone this repository to your local machine using the following command:
 ```bash
 git clone https://github.com/FathimaHusna/pizzaBillingWeb
@@ -61,3 +61,34 @@ Once you have both the backend and frontend servers running, you can access the 
 
 Frontend: http://localhost:3001
 Backend: http://localhost:3000
+
+
+## 📄 Documentation
+
+For detailed documentation, please check out our [PDF Documentation](./documents/db_doc.pdf).
+For detailed documentation, please check out our [PDF Documentation](./documents/Project_doc.pdf).
+
+
+## 🖥️ Screenshots
+
+### Homepage
+![Homepage Screenshot](./screenshots/home.png)
+### Items
+![Itempage_1 Screenshot](./screenshots/it1.png)
+![Itempage_2 Screenshot](./screenshots/it2.png)
+![Itempage_3 Screenshot](./screenshots/it3.png)
+![Itempage_4 Screenshot](./screenshots/it4.png)
+![Itempage_5 Screenshot](./screenshots/it5.png)
+![Itempage_6 Screenshot](./screenshots/it6.png)
+
+
+### Invoices
+![Invoicepage_1 Screenshot](./screenshots/inv1.png)
+![Invoicepage_2 Screenshot](./screenshots/inv2.png)
+![Invoicepage_3 Screenshot](./screenshots/inv3.png)
+![Invoicepage_4 Screenshot](./screenshots/inv4.png)
+![Invoicepage_5 Screenshot](./screenshots/inv5.png)
+
+
+
+

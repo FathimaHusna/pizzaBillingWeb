@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
-import { createInvoice, getInvoices } from "../../services/Api";
+import { createInvoice, getInvoices , getItems} from "../../services/Api";
 
 
 const CreateInvoicePage = () => {
@@ -13,6 +13,7 @@ const CreateInvoicePage = () => {
   });
 
   const [customers, setCustomers] = useState([]);
+  const [itemsList, setItemsList] = useState([]) 
   const [searchTerm, setSearchTerm] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -36,6 +37,42 @@ const CreateInvoicePage = () => {
 
     fetchCustomers();
   }, []);
+
+  // Fetch Items
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const response = await getItems();
+        setItemsList(response);
+      } catch (error) {
+        console.error("Error fetching items:", error);
+      }
+    };
+
+    fetchItems();
+  }, []);
+
+  // Handle item change and auto-populate price
+  const handleItemChange = (index, field, value) => {
+    const updatedItems = [...invoiceData.items];
+
+    if (field === "name") {
+      const selectedItem = itemsList.find((item) => item.name === value);
+      if (selectedItem) {
+        updatedItems[index] = {
+          ...updatedItems[index],
+          name: selectedItem.name,
+          price: selectedItem.price,
+        };
+      } else {
+        updatedItems[index][field] = value; // For manual entry
+      }
+    } else {
+      updatedItems[index][field] = value;
+    }
+
+    setInvoiceData({ ...invoiceData, items: updatedItems });
+  };
 
   const handleCustomerSelect = (customer) => {
     setInvoiceData({ ...invoiceData, customer_name: customer });
@@ -214,13 +251,21 @@ const CreateInvoicePage = () => {
           <tbody>
             {invoiceData.items.map((item, index) => (
               <tr key={item.id} className="border-t">
-                <td className="px-4 py-2">
-                  <input
-                    type="text"
+                <td>
+                  <select
                     value={item.name}
-                    onChange={(e) => handleChange(index, "name", e.target.value)}
+                    onChange={(e) =>
+                      handleItemChange(index, "name", e.target.value)
+                    }
                     className="border px-2 py-1"
-                  />
+                  >
+                    <option value="">Select Item</option>
+                    {itemsList.map((product) => (
+                      <option key={product.id} value={product.name}>
+                        {product.name}
+                      </option>
+                    ))}
+                  </select>
                 </td>
                 <td className="px-4 py-2">
   <input

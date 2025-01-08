@@ -88,8 +88,8 @@ const PrintInvoice = ({ invoice }) => {
             <div className="mt-6 text-center border-t border-gray-300 pt-4">
                 <p className="text-gray-500">
                     If you have any questions about this invoice, please contact us at{" "}
-                    <a href="mailto:info@example.com" className="text-blue-500 underline">
-                        info@example.com
+                    <a href="mailto:husnasameen016@gmail.com" className="text-blue-500 underline">
+                        info@bigburger.com
                     </a>.
                 </p>
             </div>
