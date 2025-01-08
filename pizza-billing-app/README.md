@@ -89,9 +89,9 @@ Once both servers are running, access the application in your browser:
 
 ## 📄 **Documentation**
 
-- [Database Documentation](./pizza-billing-app/public/documents/db_doc.pdf)
+- [Database Documentation](./public/documents/db_doc.pdf)
 
-- [Database Documentation](./pizza-billing-app/public/documents/Project_doc.pdf)
+- [Project Documentation](./public/documents/Project_doc.pdf)
 
 
 ---
@@ -122,7 +122,7 @@ Once both servers are running, access the application in your browser:
 ![Invoicepage_3 Screenshot](./public/screenshots/Invoices/inv3.png)
 
 ![Invoicepage_4 Screenshot](./public/screenshots/Invoices/inv4.png)
-  
+
 ![Invoicepage_5 Screenshot](./public/screenshots/Invoices/inv5.png)  
 
 
