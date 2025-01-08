@@ -1,5 +1,5 @@
 
-```markdown
+
 # 🍕 Pizza Billing Web Application
 
 ## 📦 **Step 1: Clone the Repository**
@@ -114,13 +114,5 @@ Once both servers are running, access the application in your browser:
 ![Invoicepage_4 Screenshot](./public/screenshots/Invoices/inv4.png)  
 ![Invoicepage_5 Screenshot](./public/screenshots/Invoices/inv5.png)  
 
----
 
-## ✅ **Best Practices for Markdown**
-
-1. Ensure file paths are **correct** for images and documentation.  
-2. Use **line breaks** between sections for readability.  
-3. Test your `README.md` rendering on GitHub after each change.
-
----
 
